@@ -141,13 +141,13 @@ ST_PLUGGABLE(p1phb3_slot, "Slot9");
 static const struct slot_table_entry mihawk_phb_table[] = {
         /* ==== CPU0 ==== */
         ST_PHB_ENTRY(0, 0, p0phb0_slot),    /* P0E0_x16_Slot1 */
-        ST_PHB_ENTRY(0, 1, p0phb1_slot),    /* P0E1A_x8_PLX8748-1_Slot2-3-5 //or GPU0 */
+        ST_PHB_ENTRY(0, 1, p0phb1_slot),    /* P0E1A_x8_PLX8748-1_Slot2-3-5 */
         //ST_PHB_ENTRY(0, 2, p0phb2_slot),  /* P0E1B_x8_USBTI7340 */
         ST_PHB_ENTRY(0, 3, p0phb3_slot),    /* P0E2_x16_Slot4 */
 
         /* ==== CPU1 ==== */
         ST_PHB_ENTRY(8, 0, p1phb0_slot),    /* P1E0_x16_Slot6 */
-        ST_PHB_ENTRY(8, 1, p1phb1_slot),    /* P1E1A_x8_PLX8748-2_Slot7-8-10 //or GPU1 */
+        ST_PHB_ENTRY(8, 1, p1phb1_slot),    /* P1E1A_x8_PLX8748-2_Slot7-8-10 */
         //ST_PHB_ENTRY(8, 2, p1phb2_slot),  /* P1E1B_x8_NA */
         ST_PHB_ENTRY(8, 3, p1phb3_slot),    /* P1E2_x16_Slot9 */
 
