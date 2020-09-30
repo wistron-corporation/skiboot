@@ -15,20 +15,19 @@
 #include "astbmc.h"
 
 ST_PLUGGABLE(mowgli_slot1, "Pcie Slot1 (16x)");
-ST_PLUGGABLE(mowgli_slot2, "Pcie Slot2 (16x)");
-ST_PLUGGABLE(mowgli_slot3, "Pcie Slot3 (8x)");
-
-ST_BUILTIN_DEV(mowgli_builtin_usb, "Builtin USB");
+ST_PLUGGABLE(mowgli_slot2, "Pcie Slot2 (8x)");
 ST_BUILTIN_DEV(mowgli_builtin_bmc, "BMC");
+ST_PLUGGABLE(mowgli_slot3, "Pcie Slot3 (8x)");
+ST_BUILTIN_DEV(mowgli_builtin_usb, "Builtin USB");
+
 
 static const struct slot_table_entry mowgli_phb_table[] = {
 	ST_PHB_ENTRY(0, 0, mowgli_slot1),
 	ST_PHB_ENTRY(0, 1, mowgli_slot2),
-	ST_PHB_ENTRY(0, 2, mowgli_slot3),
+	ST_PHB_ENTRY(0, 2, mowgli_builtin_bmc),
+	ST_PHB_ENTRY(0, 3, mowgli_slot3),	
+	ST_PHB_ENTRY(0, 4, mowgli_builtin_usb),
 	
-	ST_PHB_ENTRY(0, 3, mowgli_builtin_usb),
-	//ST_PHB_ENTRY(0, 4, mowgli_builtin_ethernet),
-	ST_PHB_ENTRY(0, 5, mowgli_builtin_bmc),
 
 	{ .etype = st_end },
 };
